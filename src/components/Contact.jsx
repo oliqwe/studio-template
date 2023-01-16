@@ -1,18 +1,14 @@
 import { Container } from '@/components/Container'
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 export function Contact() {
   return (
     <section
       id="testimonials"
       aria-label="What our customers are saying"
-      className="bg-slate-50 py-20 sm:py-32"
+      className="bg-slate-50 py-20 sm:py-12"
     >
       <Container>
-        <div className="overflow-hidden bg-white py-16 px-4 sm:px-6 lg:px-8 lg:py-24">
+        <div className="overflow-hidden rounded-2xl py-6 px-4 sm:px-6 lg:px-8 lg:py-6">
           <div className="relative mx-auto max-w-xl">
             <svg
               className="absolute left-full translate-x-1/2 transform"
@@ -81,7 +77,7 @@ export function Contact() {
               />
             </svg>
             <div className="text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
                 Let's Talk
               </h2>
               <p className="mt-4 text-lg leading-6 text-gray-500">
@@ -176,23 +172,14 @@ export function Contact() {
                       <label htmlFor="country" className="sr-only">
                         Country
                       </label>
-                      <select
-                        id="country"
-                        name="country"
-                        className="h-full rounded-md border-transparent bg-transparent py-0 pl-4 pr-8 text-gray-500 focus:border-indigo-500 focus:ring-indigo-500"
-                      >
-                        <option>US</option>
-                        <option>CA</option>
-                        <option>EU</option>
-                      </select>
                     </div>
                     <input
                       type="text"
                       name="phone-number"
                       id="phone-number"
                       autoComplete="tel"
-                      className="block w-full rounded-md border-gray-300 py-3 px-4 pl-20 focus:border-indigo-500 focus:ring-indigo-500"
-                      placeholder="+1 (555) 987-6543"
+                      className="block w-full rounded-md border-gray-300 py-3 px-4 focus:border-indigo-500 focus:ring-indigo-500"
+                      placeholder=""
                     />
                   </div>
                 </div>
@@ -212,29 +199,6 @@ export function Contact() {
                       defaultValue={''}
                       placeholder="Tell us about your project. What problem can we help you solve?"
                     />
-                  </div>
-                </div>
-                <div className="sm:col-span-2">
-                  <div className="flex items-start">
-                    <div className="ml-3">
-                      <p className="text-base text-gray-500">
-                        By selecting this, you agree to the{' '}
-                        <a
-                          href="#"
-                          className="font-medium text-gray-700 underline"
-                        >
-                          Privacy Policy
-                        </a>{' '}
-                        and{' '}
-                        <a
-                          href="#"
-                          className="font-medium text-gray-700 underline"
-                        >
-                          Cookie Policy
-                        </a>
-                        .
-                      </p>
-                    </div>
                   </div>
                 </div>
                 <div className="sm:col-span-2">

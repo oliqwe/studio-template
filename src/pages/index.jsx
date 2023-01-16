@@ -11,6 +11,8 @@ import { SecondaryFeatures } from '@/components/SecondaryFeatures'
 import { Testimonials } from '@/components/Testimonials'
 import Work from '@/components/Work'
 import { Contact } from '@/components/Contact'
+import TestimonialsCeo from '@/components/TestimonialsCeo'
+import People from '@/components/People'
 
 export default function Home() {
   return (
@@ -27,7 +29,9 @@ export default function Home() {
         <Hero />
         <Work />
         <SecondaryFeatures />
-        <PrimaryFeatures />
+        <TestimonialsCeo />
+        <People />
+        {/*<PrimaryFeatures />*/}
         <Contact />
         {/*<CallToAction />*/}
         {/*<Testimonials />*/}

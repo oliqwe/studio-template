@@ -44,11 +44,11 @@ const features = [
     },
   },
   {
-    name: 'Inventory',
+    name: 'Technical excellency',
     summary:
       'Never lose track of what’s in stock with accurate inventory tracking.',
     description:
-      'We don’t offer this as part of our software but that statement is inarguably true. Accurate inventory tracking would help you for sure.',
+      'Our agile engineering practices will bring software craftsmanship, quality, and consistency to the table, to guarantee ever-changing requirements.',
     image: screenshotInventory,
     icon: function InventoryIcon() {
       return (
@@ -72,11 +72,11 @@ const features = [
     },
   },
   {
-    name: 'Contacts',
+    name: 'Partner & advisor',
     summary:
       'Organize all of your contacts, service providers, and invoices in one place.',
     description:
-      'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
+      'We take strong ownership of the projects we work on, meaning you can expect a business partner ready to help you every step of the way.',
     image: screenshotContacts,
     icon: function ContactsIcon() {
       return (
@@ -98,32 +98,28 @@ const features = [
 
 function Feature({ feature, isActive, className, ...props }) {
   return (
-    <div
-      className={clsx(className, !isActive && 'opacity-75 hover:opacity-100')}
-      {...props}
-    >
-      <div
-        className={clsx(
-          'w-9 rounded-lg',
-          isActive ? 'bg-blue-600' : 'bg-slate-500'
-        )}
-      >
-        <svg aria-hidden="true" className="h-9 w-9" fill="none">
-          <feature.icon />
-        </svg>
+    <div {...props}>
+      <div className="flex justify-center">
+        <div className="flex w-9 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500">
+          <svg aria-hidden="true" className="h-9 w-9" fill="none">
+            <feature.icon />
+          </svg>
+        </div>
       </div>
       <h3
         className={clsx(
-          'mt-6 text-sm font-medium',
+          'mt-6 text-center text-sm font-medium',
           isActive ? 'text-blue-600' : 'text-slate-600'
         )}
       >
         {feature.name}
       </h3>
-      <p className="mt-2 font-display text-xl text-slate-900">
+      <p className="mt-2 text-center font-display text-xl text-slate-900">
         {feature.summary}
       </p>
-      <p className="mt-4 text-sm text-slate-600">{feature.description}</p>
+      <p className="mt-4 text-center text-sm text-slate-600">
+        {feature.description}
+      </p>
     </div>
   )
 }
@@ -134,17 +130,6 @@ function FeaturesMobile() {
       {features.map((feature) => (
         <div key={feature.name}>
           <Feature feature={feature} className="mx-auto max-w-2xl" isActive />
-          <div className="relative mt-10 pb-10">
-            <div className="absolute -inset-x-4 bottom-0 top-8 bg-slate-200 sm:-inset-x-6" />
-            <div className="relative mx-auto w-[52.75rem] overflow-hidden rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
-              <Image
-                className="w-full"
-                src={feature.image}
-                alt=""
-                sizes="52.75rem"
-              />
-            </div>
-          </div>
         </div>
       ))}
     </div>
@@ -162,8 +147,8 @@ function FeaturesDesktop() {
               feature={{
                 ...feature,
                 name: (
-                  <div className="[&:not(:focus-visible)]:focus:outline-none">
-                    <span className="absolute inset-0" />
+                  <div>
+                    <span />
                     {feature.name}
                   </div>
                 ),
@@ -182,7 +167,7 @@ export function SecondaryFeatures() {
     <section
       id="secondary-features"
       aria-label="Features for simplifying everyday business tasks"
-      className="pt-20 pb-14 sm:pb-20 sm:pt-32 lg:pb-32"
+      className="pt-16 pb-14 sm:pb-20 sm:pt-6 lg:pb-32"
     >
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
