@@ -1,14 +1,11 @@
 import Head from 'next/head'
 
-import { CallToAction } from '@/components/CallToAction'
-import { Faqs } from '@/components/Faqs'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
-import { Hero } from '@/components/Hero'
-import { Pricing } from '@/components/Pricing'
-import { PrimaryFeatures } from '@/components/PrimaryFeatures'
+import { Index } from '@/components/Hero'
+
 import { SecondaryFeatures } from '@/components/SecondaryFeatures'
-import { Testimonials } from '@/components/Testimonials'
+
 import Work from '@/components/Work'
 import { Contact } from '@/components/Contact'
 import TestimonialsCeo from '@/components/TestimonialsCeo'
@@ -26,7 +23,7 @@ export default function Home() {
       </Head>
       <Header />
       <main className="bg-gray-50">
-        <Hero />
+        <Index />
         <Work />
         <SecondaryFeatures />
         <TestimonialsCeo />
