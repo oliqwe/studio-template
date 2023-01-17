@@ -45,9 +45,8 @@ export function Index() {
             xmlns="http://www.w3.org/2000/svg"
             x="0"
             y="0"
-            enableBackground="new 0 0 713.2 358.4"
             version="1.1"
-            viewBox="0 0 713.2 358.4"
+            viewBox="160 140 420 60"
             xmlSpace="preserve"
           >
             <Build />
